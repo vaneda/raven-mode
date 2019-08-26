@@ -1,4 +1,8 @@
 ;;; lang/raven/raven.el -*- lexical-binding: t; -*-
+;;;
+;;; Name: raven-mode
+;;; Keywords: languages, vue, javascript
+;;; Package-Requires: ((polymode "0.2") (regexp-opt "*"))
 
 (require 'polymode)
 (require 'regexp-opt)
