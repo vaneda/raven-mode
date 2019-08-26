@@ -1,8 +1,11 @@
-;;; lang/raven/raven.el -*- lexical-binding: t; -*-
-;;;
-;;; Name: raven-mode
-;;; Keywords: languages, vue, javascript
-;;; Package-Requires: ((polymode "0.2") (regexp-opt "*"))
+;;; raven-mode.el --- Vue File Editing Mode Based on Polymode -*- lexical-binding: t; -*-
+
+;; Name: raven-mode
+;; Keywords: languages, vue, javascript
+;; Package-Requires: ((polymode "0.2") (regexp-opt "*"))
+;;
+;;; Commentary:
+;;; Code:
 
 (require 'polymode)
 (require 'regexp-opt)
@@ -50,3 +53,5 @@
 (add-to-list 'auto-mode-alist '("\\.vue\\'" . vue-polymode))
 
 (provide 'raven-mode)
+
+;;; raven-mode.el ends here
