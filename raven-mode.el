@@ -1,10 +1,15 @@
 ;;; raven-mode.el --- Vue File Editing Mode Based on Polymode -*- lexical-binding: t; -*-
 
 ;; Name: raven-mode
+;; Author: Wilson Waddell <wilsonwaddell1@gmail.com>
 ;; Keywords: languages, vue, javascript
 ;; Package-Requires: ((polymode "0.2") (regexp-opt "*"))
-;;
+;; License: MIT
+
 ;;; Commentary:
+
+;;
+
 ;;; Code:
 
 (require 'polymode)
