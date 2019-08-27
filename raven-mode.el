@@ -56,7 +56,7 @@
 
 ;;;###autoload
 (define-polymode vue-polymode
-  :hostmode vue-hostmode
+  :hostmode 'vue-hostmode
   :innermodes '(vue-template-innermode vue-script-innermode vue-css-innermode))
 
 ;;;###autoload
