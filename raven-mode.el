@@ -52,16 +52,13 @@
   :tail-matcher vue-css-end-regexp)
 
 (define-hostmode vue-hostmode
-  :mode 'raven-mode)
+  :mode 'prog-mode)
 
 ;;;###autoload
-(define-polymode vue-polymode
+(define-polymode raven-mode 
   :hostmode 'vue-hostmode
   :innermodes '(vue-template-innermode vue-script-innermode vue-css-innermode))
 
-;;;###autoload
-(define-derived-mode raven-mode nil "Raven" "A vue file editing mode"
-  (vue-polymode))
 
 (provide 'raven-mode)
 
