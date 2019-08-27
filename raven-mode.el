@@ -51,8 +51,12 @@
   :head-matcher vue-css-start-regexp
   :tail-matcher vue-css-end-regexp)
 
+(define-hostmode vue-hostmode
+  :mode 'raven-mode)
+
 ;;;###autoload
 (define-polymode vue-polymode
+  :hostmode vue-hostmode
   :innermodes '(vue-template-innermode vue-script-innermode vue-css-innermode))
 
 ;;;###autoload
