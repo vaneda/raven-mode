@@ -51,9 +51,13 @@
   :head-matcher vue-css-start-regexp
   :tail-matcher vue-css-end-regexp)
 
-;;;###autoload (autoload 'vue-polymode "raven-mode")
+;;;###autoload
 (define-polymode vue-polymode
   :innermodes '(vue-template-innermode vue-script-innermode vue-css-innermode))
+
+;;;###autoload
+(define-derived-mode raven-mode nil "Raven" "A vue file editing mode"
+  (vue-polymode))
 
 (provide 'raven-mode)
 
