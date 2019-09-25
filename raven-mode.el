@@ -15,6 +15,15 @@
 (require 'polymode)
 (require 'regexp-opt)
 
+;;;###autoload
+(defun raven/poly-fontlock (old-buff new-buff)
+  "Call fontify on the buffer polymode is switching to.
+Some modes (js2-mode) don't properly fontify.
+
+   OLD-BUFF buffer polymode is leaving
+   NEW-BUFF buffer polymode is entering"
+  (font-lock-fontify-buffer new-buff))
+
 (defvar vue-template-start-regexp
   (regexp-opt '("<template lang=\"pug\"")))
 
@@ -55,9 +64,11 @@
   :mode 'prog-mode)
 
 ;;;###autoload
-(define-polymode raven-mode 
+(define-polymode raven-mode
   :hostmode 'vue-hostmode
-  :innermodes '(vue-template-innermode vue-script-innermode vue-css-innermode))
+  :innermodes '(vue-template-innermode vue-script-innermode vue-css-innermode)
+  :switch-buffer-functions '(raven/poly-fontlock)
+  )
 
 
 (provide 'raven-mode)
