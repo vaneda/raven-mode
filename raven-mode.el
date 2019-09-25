@@ -63,7 +63,6 @@ Some modes (js2-mode) don't properly fontify.
 (define-hostmode vue-hostmode
   :mode 'prog-mode)
 
-;;;###autoload
 (define-polymode raven-mode
   :hostmode 'vue-hostmode
   :innermodes '(vue-template-innermode vue-script-innermode vue-css-innermode)
